@@ -135,3 +135,18 @@ html, body {
   width: 150px;
   margin-bottom: 15px;
 }
+
+.column {
+  box-sizing: border-box;
+  width: 33%;
+  display: inline-block;
+}
+
+.home-column {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
