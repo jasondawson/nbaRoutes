@@ -2,7 +2,6 @@ var app = angular.module('nbaRoutes');
 
 app.service('teamService', function($http, $q){
 
-
 this.addNewGame = function(gameObj) {
 var url = "https://api.parse.com/1/classes/" + gameObj.homeTeam;
 
@@ -36,10 +35,16 @@ this.getTeamData = function(team) {
 			}
 		}
 
+		var teams = {
+			'utahjazz': 'Utah Jazz',
+			'losangeleslakers': 'Los Angeles Lakers',
+			'miamiheat': 'Miami Heat'
+			};
+
+		results.homeTeamFull = teams[results[0].homeTeam];
 		deferred.resolve(results);
 	})
 
-	
 
 	return deferred.promise; 
 };
